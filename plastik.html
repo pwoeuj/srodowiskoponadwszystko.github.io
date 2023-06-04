@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  font-family: Arial;
+
+  padding: 10px;
+
+  background: #b7b78a;
+
+}
+
+/* Header/Blog Title */
+
+.header {
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #658864;
+
+}
+
+.header h1 {
+
+  font-size: 50px;
+
+}
+
+/* Style the top navigation bar */
+
+.topnav {
+
+  overflow: hidden;
+
+  background-color: #658864;
+
+}
+
+/* Style the topnav links */
+
+.topnav a {
+
+  float: left;
+
+  display: block;
+
+  color: black;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+/* Change color on hover */
+
+.topnav a:hover {
+
+  background-color: #ddd;
+
+  color: black;
+
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+
+.leftcolumn {  
+
+  float: left;
+
+  width: 75%;
+
+}
+
+/* Right column */
+
+.rightcolumn {
+
+  float: left;
+
+  width: 25%;
+
+  background-color: #b7b78a;
+
+  padding-left: 20px;
+
+}
+
+/* Fake image */
+
+.fakeimg {
+
+  background-color: #aaaaaa00;
+
+  width: 100%;
+
+  padding: 0px;
+
+}
+
+/* Add a card effect for articles */
+
+.card {
+
+  background-color: #658864 ;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+}
+
+/* Clear floats after the columns */
+
+.row::after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+/* Footer */
+
+.footer {
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #648865 ;
+
+  margin-top: 20px;
+
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+
+  .leftcolumn, .rightcolumn {  
+
+    width: 100%;
+
+    padding: 0;
+
+  }
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+
+  .topnav a {
+
+    float: none;
+
+    width: 100%;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h1>Jak ograniczyć plastik?</h1>
+
+<p>Tutaj dowiesz się jak plastik zagraża naszej planecie, i jak go ograniczyć. </p>
+
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+
+    <div class="card">
+
+       <h2>Jak plastik nam zagraża?</h2>
+
+       <div class="fakeimg" style="height:200px;"> <img src="koparkasmieci.jpg" style="height:200px;"></div>
+<p> Prognozy mówią, że do 2050 roku w morzach i oceanach będzie pływało więcej plastikowych odpadów niż ryb morskich. Nie są to tylko plastikowe reklamówki, butelki i słomki, jest to też niewidoczny gołym okiem mikroplastik, który często staje się pożywieniem dla organizmów wodnych, powoli je zatruwając.
+
+Obecnie kąpieli morskich zażywa ponad 150 milionów ton plastiku. Tak potężna góra śmieci zabija zwierzęta i zatruwa ryby, które później trafiają do naszych talerzy. Jest to dla nas szkodliwe. Plastik ogranicza też populację ławic ryb i innych stworzeń morskich, powodując masowe wymieranie gatunków. Pamiętajmy, że tworzywa sztuczne, często potocznie określane jako plastikowe, mogą rozkładać się od 100 do 1000 lat.
+
+Plastik w postaci pyłu znajduje się także w powietrzu, wdychamy go każdego dnia. Większość kosmetyków, szczególnie peelingów i żeli do mycia twarzy zawiera plastikowe mikrokulki, które lądują w kanalizacji. Niestety ale żadna oczyszczalnia nie jest w stanie przefiltrować tak maleńkich drobinek plastiku.</p>
+
+    </div>
+
+    <div class="card">
+
+     <h2>Jak go ograniczyć?</h2>
+
+     <div class="fakeimg" style="height:200px;"> <img src="pomaganie.jpg" style="height:200px;"></div>
+
+      <p> <p>1. wybieraj produkty niepakowane w tworzywa sztuczne.
+
+2. zawsze bierz na zakupy torbę wielokrotnego użytku.
+
+3. wybieraj produkty na wagę
+
+4. bierz na zakupy własne pojemniki, słoiki, siateczki.
+
+5. kupuj mleko w szklanej butelce.
+
+6. wybieraj duże opakowania zamiast małych.
+
+7. Zacznij segregować odpady.
+
+8. Ogranicz zużycie opakowań z tworzyw sztucznych.
+
+9. Zapomnij o plastikowych słomkach oraz zastawie stołowej.
+
+10. Nie kupuj napojów w plastikowych butelkach.</p>
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+
+    <div class="card">
+
+      <h2>Zegar</h2>
+
+      <body onload="startTime()">
+
+<div id="txt"></div>
+
+<script>
+
+function startTime() {
+
+  const today = new Date();
+
+  let h = today.getHours();
+
+  let m = today.getMinutes();
+
+  let s = today.getSeconds();
+
+  m = checkTime(m);
+
+  s = checkTime(s);
+
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+
+  setTimeout(startTime, 1000);
+
+}
+
+function checkTime(i) {
+
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+
+  return i;
+
+}
+
+</script>
+
+      <p></p>
+
+    </div>
+
+ 
+
+    <div class="card">
+
+      <h3>Źródła</h3>
+
+<a href=https://portalstatystyczny.pl/jak-nam-szkodzi-plastik-szkodliwy-wplyw-tworzyw-sztucznych-na-nasze-zdrowie/
+
+> Jak plastik szkodzi
+
+</a>
+
+<a  href=https://www.sposobynazycie.pl/wyrzuc-plastik-ze-swojego-zycia-niekonczaca-sie-lista-porad-zero-waste-od-moich-babc/#:~:text=Zrezygnuj%20z%20u%C5%BCywania%20plastikowych%20naczy%C5%84%20i%20s%C5%82omek.%20Nie,tworzy%C4%87%20z%20octu%2C%20sody%20oczyszczonej%20i%20olejk%C3%B3w%20eterycznych.
+
+>Poznaj 11 sposobów na życie bez plastiku
+
+</a>
+
+
+
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+
+  <h7> Autorzy strony: Julia Czubara, Oliwia Gulka,  Wiktoria Borgosz </h7>
+
+</div>
+
+</body>
+
+</html>

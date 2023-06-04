@@ -1,0 +1,325 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  font-family: Arial;
+
+  padding: 10px;
+
+  background: #b7b78a;
+
+}
+
+/* Header/Blog Title */
+
+.header {
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #658864;
+
+}
+
+.header h1 {
+
+  font-size: 50px;
+
+}
+
+/* Style the top navigation bar */
+
+.topnav {
+
+  overflow: hidden;
+
+  background-color: #658864;
+
+}
+
+/* Style the topnav links */
+
+.topnav a {
+
+  float: left;
+
+  display: block;
+
+  color: black;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+/* Change color on hover */
+
+.topnav a:hover {
+
+  background-color: #ddd;
+
+  color: black;
+
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+
+.leftcolumn {   
+
+  float: left;
+
+  width: 75%;
+
+}
+
+/* Right column */
+
+.rightcolumn {
+
+  float: left;
+
+  width: 25%;
+
+  background-color: #b7b78a;
+
+  padding-left: 20px;
+
+}
+
+/* Fake image */
+
+.fakeimg {
+
+  background-color: #aaaaaa00;
+
+  width: 100%;
+
+  padding: 0px;
+
+}
+
+/* Add a card effect for articles */
+
+.card {
+
+  background-color: #658864 ;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+}
+
+/* Clear floats after the columns */
+
+.row::after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+/* Footer */
+
+.footer {
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #648865 ;
+
+  margin-top: 20px;
+
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+
+  .leftcolumn, .rightcolumn {   
+
+    width: 100%;
+
+    padding: 0;
+
+  }
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+
+  .topnav a {
+
+    float: none;
+
+    width: 100%;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+ <h1>Jak oszczędzać wodę i energię?</h1>
+
+<p>Woda i energia to jedne z najważniejszych zasobów naszej planety. Nie oszczędzaie ich może doprowadzić nie tylko do szkód finansowych, ale i może poważnie zaszkodzić naszej planecie. </p>
+
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+
+    <div class="card">
+
+       <h2>Jak oszczędzać energię?</h2>
+
+       <div class="fakeimg" style="height:200px;"> <img src="energia.jpg" style="height:200px;"></div>
+ <p> Wyłączaj systemy grzewcze podczas wietrzenia
+
+- Staraj się maksymalnie wykorzystywać światło dzienne
+
+- Oświetl ogród za pomocą lamp solarnych
+
+- Wyłączaj światło po wyjściu z pomieszczenia
+
+- Zamontuj na kaloryferach termostaty.
+
+- Wymień żarówki na energooszczędne.
+
+- Stosuj panele fotowoltaiczne jako źródło prądu.</p>
+
+    </div>
+
+    <div class="card">
+
+     <h2>Jak oszczędzać wodę?</h2>
+
+     <div class="fakeimg" style="height:200px;"> <img src="wodziszczon.jpg" style="height:200px;"></div>
+
+      <p>- Ogranicz pranie
+
+- Korzystaj z kąpieli pod prysznicem zamiast w wannie
+
+- Kontroluj szczelność kranów.
+
+- Kupuj sprzęty oszczędzające wodę.
+
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+
+    <div class="card">
+
+      <h2>Zegar</h2>
+
+      <body onload="startTime()">
+
+<div id="txt"></div>
+
+<script>
+
+function startTime() {
+
+  const today = new Date();
+
+  let h = today.getHours();
+
+  let m = today.getMinutes();
+
+  let s = today.getSeconds();
+
+  m = checkTime(m);
+
+  s = checkTime(s);
+
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+
+  setTimeout(startTime, 1000);
+
+}
+
+function checkTime(i) {
+
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+
+  return i;
+
+}
+
+</script>
+
+      <p></p>
+
+    </div>
+
+  
+
+    <div class="card">
+
+      <h3>Źródła</h3>
+
+<div class="topnav">
+<a href=https://www.aldi.pl/zero-waste/jak-oszczedzac-wode.html
+
+>Oszczędzanie wody
+
+ <a href=https://nano.komputronik.pl/n/jak-oszczedzac-prad-15-sposobow/
+
+> Oszczędzanie energii
+
+</a>
+
+
+
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+
+  <h7> Autorzy strony: Julia Czubara, Oliwia Gulka,  Wiktoria Borgosz </h7>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+KALKULATOR BUTELEK:
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+body {
+
+  font-family: Arial;
+
+  padding: 10px;
+
+  background: #b7b78a;
+
+}
+
+<title>Kalkulator nowych butelek</title>
+
+</style>
+
+</head>
+
+<body>
+
+<h2>Kalkulator nowych butelek</h2>
+
+<label>Ilość butelek do recyklingu: </label>
+
+<input type="number" id="recycledBottlesInput" min="0" value="0">
+
+<button onclick="calculateNewBottles()">Oblicz</button>
+
+<p id="result"></p>
+
+<script>
+
+function calculateNewBottles() {
+
+var recycledBottles = parseInt(document.getElementById('recycledBottlesInput').value);
+
+var newBottles = Math.floor(recycledBottles / 10); // Assuming 10 recycled bottles create 1 new bottle
+
+document.getElementById('result').textContent = "Stworzysz około " + newBottles + " nowe butelki"
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+
+* {
+
+  box-sizing: border-box;
+
+}
+
+body {
+
+  font-family: Arial;
+
+  padding: 10px;
+
+  background: #b7b78a;
+
+}
+
+/* Header/Blog Title */
+
+.header {
+
+  padding: 30px;
+
+  text-align: center;
+
+  background: #658864;
+
+}
+
+.header h1 {
+
+  font-size: 50px;
+
+}
+
+/* Style the top navigation bar */
+
+.topnav {
+
+  overflow: hidden;
+
+  background-color: #658864;
+
+}
+
+/* Style the topnav links */
+
+.topnav a {
+
+  float: left;
+
+  display: block;
+
+  color: black;
+
+  text-align: center;
+
+  padding: 14px 16px;
+
+  text-decoration: none;
+
+}
+
+/* Change color on hover */
+
+.topnav a:hover {
+
+  background-color: #ddd;
+
+  color: black;
+
+}
+
+/* Create two unequal columns that floats next to each other */
+
+/* Left column */
+
+.leftcolumn {   
+
+  float: left;
+
+  width: 75%;
+
+}
+
+/* Right column */
+
+.rightcolumn {
+
+  float: left;
+
+  width: 25%;
+
+  background-color: #b7b78a;
+
+  padding-left: 20px;
+
+}
+
+/* Fake image */
+
+.fakeimg {
+
+  background-color: #aaaaaa00;
+
+  width: 100%;
+
+  padding: 0px;
+
+}
+
+/* Add a card effect for articles */
+
+.card {
+
+  background-color: #658864 ;
+
+  padding: 20px;
+
+  margin-top: 20px;
+
+}
+
+/* Clear floats after the columns */
+
+.row::after {
+
+  content: "";
+
+  display: table;
+
+  clear: both;
+
+}
+
+/* Footer */
+
+.footer {
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #648865 ;
+
+  margin-top: 20px;
+
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+
+  .leftcolumn, .rightcolumn {   
+
+    width: 100%;
+
+    padding: 0;
+
+  }
+
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 400px) {
+
+  .topnav a {
+
+    float: none;
+
+    width: 100%;
+
+  }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+  <h1>DIY</h1>
+
+  <p>Nie wyrzucaj materiałów, które mogą się przydać w przyszłości. Pokażemy 2 sposoby na wykorzystanie ich spowrotem! </p>
+
+</div>
+
+<div class="row">
+
+  <div class="leftcolumn">
+
+    <div class="card">
+
+      <h2>Zachowaj stare korki i zrób z nich wyjątkowe dekoracje lub prezenty!</h2>
+
+      <div class="fakeimg" style="height:200px;"> <img src="korek.jpg" style="height:200px;"></div>
+
+      <p>Włóż korki do garnka z wrzącą wodą na dziesięć minut. Po upływie dziesięciu minut wyjmij korki i pozwól im ostygnąć. Przytrzymaj korki, aby je pokroić. Pokrój korki na trzy równe części za pomocą ząbkowanego noża.
+
+Wytnij łącznie 19 kawałków na każdą podstawkę.
+
+Sklej je razem gorącym klejem.
+
+Przed przejściem do następnego kroku, pozwól podstawce całkowicie ostygnąć.
+
+Dodaj kropki gorącego kleju na korki, a następnie wygładź kawałek filcu na wierzchu.
+
+Ostatnim krokiem jest dodanie wstążki lub sznurka wokół krawędzi.
+
+Znajdź miejsce, od którego chcesz zacząć i dodaj odrobinę gorącego kleju. Umieść wstążkę i przytrzymaj, aż się przyklei.
+
+Gotowe!!!</p>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Nie wyrzucaj kartonów po mleku! Możesz z nich stworzyć małe urocze koszyczki.</h2>
+
+      <div class="fakeimg" style="height:200px;"> <img src="karton.jpg" style="height:200px;"></div>
+
+      <p>
+
+Zanim zaczniesz, wyczyść karton po mleku ciepłą wodą z mydłem.
+
+Odmierz karton i równo odetnij górną część za pomocą ostrego noża.
+
+Aby przykleić patyczki od lodów użył gorącego kleju. Upewnij się, że są równomiernie rozmieszczone wokół kartonu. Nałóż niewielką ilość kleju i mocno dociśnij patyczki do kartonu. Następnie pomaluj wszystko ba biało.
+
+Kiedy farba wyschnie zszyj materiałową podszewkę i przyklej ją do środka koszyczka.
+
+Gotowe!!!</p>
+
+    </div>
+
+  </div>
+
+  <div class="rightcolumn">
+
+    <div class="card">
+
+      <h2>Zegar</h2>
+
+      <body onload="startTime()">
+
+<div id="txt"></div>
+
+<script>
+
+function startTime() {
+
+  const today = new Date();
+
+  let h = today.getHours();
+
+  let m = today.getMinutes();
+
+  let s = today.getSeconds();
+
+  m = checkTime(m);
+
+  s = checkTime(s);
+
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+
+  setTimeout(startTime, 1000);
+
+}
+
+function checkTime(i) {
+
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+
+  return i;
+
+}
+
+</script>
+
+      <p></p>
+
+    </div>
+
+   
+
+    <div class="card">
+
+      <h3>Źródła</h3>
+
+<div class="topnav">
+
+  <a href="https://columbusenergy.pl/blog/jak-dbac-o-srodowisko/">Segregacja</a>
+
+    </div>
+
+  </div>
+
+  </div>
+
+</div>
+
+<div class="footer">
+
+  <h7>Autorzy strony: Julia Czubara, Oliwia Gulka,  Wiktoria Borgosz </h7>
+
+</div>
+
+</body>
+
+</html>
